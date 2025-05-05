@@ -78,11 +78,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &trans                                                            &none       &none         &none          &none        &none          &none  &none
-&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &none                                                             &none       &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LG(RIGHT)  &none  &none
-&to 0      &kp A      &kp S   &kp D     &kp F      &kp G   &none     &kp LCTRL       &kp LALT      &kp LGUI   &kp RCTRL      &none       &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &none  &none
-&kp LSHFT  &kp Z      &kp X   &kp C     &kp V      &kp B                             &kp HOME      &kp PG_UP                             &kp HOME      &none          &none        &kp END        &none  &none
-&mo 2      &kp GRAVE  &none   &kp LEFT  &kp RIGHT          &kp BSPC  &kp LEFT_SHIFT  &kp END       &kp PG_DN  &kp BACKSPACE  &kp DELETE                &kp UP         &kp DOWN     &none          &none  &none
+&none    &none         &none      &none         &none           &none  &trans                                                            &none       &none         &none          &none        &none          &none  &none
+&kp TAB  &none         &none      &none         &none           &none  &none                                                             &none       &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LG(RIGHT)  &none  &none
+&to 0    &kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_SHIFT  &none  &none     &kp LCTRL       &kp LALT      &kp LGUI   &kp RCTRL      &none       &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &none  &none
+&none    &none         &none      &none         &none           &none                            &kp HOME      &kp PG_UP                             &kp HOME      &none          &none        &kp END        &none  &none
+&mo 2    &kp GRAVE     &none      &kp LEFT      &kp RIGHT              &kp BSPC  &kp LEFT_SHIFT  &kp END       &kp PG_DN  &kp BACKSPACE  &kp DELETE                &kp UP         &kp DOWN     &none          &none  &none
             >;
         };
 
@@ -118,24 +118,14 @@
             >;
         };
 
-        extra1 {
-            display-name = "Red";
-            status = "reserved";
-        };
-
-        extra2 {
-            display-name = "Purple";
-            status = "reserved";
-        };
-
-        extra3 {
-            display-name = "Cyan";
-            status = "reserved";
-        };
-
-        extra4 {
-            display-name = "Yellow";
-            status = "reserved";
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
