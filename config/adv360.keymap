@@ -131,6 +131,14 @@
             bindings = <&mo>, <&space_tab>;
             tapping-term-ms = <200>;
         };
+            
+        ht_sptb: hold-tap-space-tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_SPACE_TAB";
+            #binding-cells = <1>;
+            bindings = <&kp>, <&space_tab>;
+            tapping-term-ms = <200>;
+        };
 
     ;
 
@@ -144,7 +152,7 @@
 &kp TAB    &kp Q             &kp W          &kp E             &kp R               &kp T   &none                                                                            &none        &kp Y   &kp U               &kp I         &kp O          &kp SEMICOLON     &kp BSLH
 &kp ESC    &hm_l LEFT_ALT A  &hm_l LCTRL R  &hm_l LEFT_GUI S  &hm_l LEFT_SHIFT T  &kp G   &none         &kp LEFT_GUI          &kp LALT          &kp LGUI      &kp RCTRL    &none        &kp H   &hm_r LEFT_SHIFT N  &hm_r LGUI E  &hm_r LCTRL I  &hm_r LEFT_ALT O  &kp SQT
 &mo 2      &kp Z             &kp X          &kp C             &kp V               &kp B                                       &kp HOME          &kp PG_UP                               &kp N   &kp M               &kp COMMA     &kp DOT        &kp UNDER         &kp EQUAL
-&mo 2      &kp GRAVE         &none          &kp LEFT          &kp RIGHT                   &lt_bspc 1 0  &mt LEFT_SHIFT SPACE  &lt 2 ESCAPE      &lt 2 DELETE  &lt 4 ENTER  &lt 2 SPACE          &kp UP              &kp DOWN      &kp LBKT       &kp RBKT          &mo 2
+&mo 2      &kp GRAVE         &none          &kp LEFT          &kp RIGHT                   &lt_bspc 1 0  &ht_sptb LEFT_SHIFT  &lt 2 ESCAPE      &lt 2 DELETE  &lt 4 ENTER  &lt_sptb 2 0          &kp UP              &kp DOWN      &kp LBKT       &kp RBKT          &mo 2
             >;
         };
 
