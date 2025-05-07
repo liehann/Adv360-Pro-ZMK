@@ -19,8 +19,8 @@
 #define THUMBS_RIGHT 37 38 57 74 75 76
 #define THUMBS THUMBS_LEFT THUMBS_RIGHT
 
-/ {
-    behaviors {
+/ 
+    behaviors 
         #include "macros.dtsi"
       #include "version.dtsi"
 
@@ -101,20 +101,36 @@
         };
 
         bs_del: bs-del {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp BSPC>, <&kp DEL>;
-          mods = <(MOD_LSFT)>;
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT)>;
         };
 
-        lt_bspc: layer_tap_bspc_del {
+        lt_bspc: layer-tap-bspc-del {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_BACKSPACE_DELETE";
             #binding-cells = <2>;
             bindings = <&mo>, <&bs_del>;
             tapping-term-ms = <200>;
         };
-    };
+
+        space_tab: space-tab {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp TAB>;
+            mods = <(MOD_LSFT)>;
+        };
+            
+        lt_sptb: layer-tap-space-tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_SPACE_TAB";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&space_tab>;
+            tapping-term-ms = <200>;
+        };
+
+    ;
 
     keymap {
         compatible = "zmk,keymap";
@@ -183,4 +199,4 @@
             >;
         };
     };
-};
+;
