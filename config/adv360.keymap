@@ -106,6 +106,14 @@
           bindings = <&kp BSPC>, <&kp DEL>;
           mods = <(MOD_LSFT)>;
         };
+
+        lt_bspc: layer_tap_bspc_del {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_BACKSPACE_DELETE";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&bs_del>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
