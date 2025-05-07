@@ -19,7 +19,7 @@
 #define THUMBS_RIGHT 37 38 57 74 75 76
 #define THUMBS THUMBS_LEFT THUMBS_RIGHT
 
-/ 
+/ {
     behaviors {
         #include "macros.dtsi"
       #include "version.dtsi"
@@ -209,4 +209,4 @@
             >;
         };
     };
-;
+};
