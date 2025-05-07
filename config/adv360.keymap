@@ -121,25 +121,27 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp TAB>;
+
             mods = <(MOD_LSFT)>;
         };
-            
+
         lt_sptb: layer-tap-space-tab {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_SPACE_TAB";
             #binding-cells = <2>;
             bindings = <&mo>, <&space_tab>;
+
             tapping-term-ms = <200>;
         };
-            
+
         ht_sptb: hold-tap-space-tab {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_SPACE_TAB";
             #binding-cells = <2>;
             bindings = <&kp>, <&space_tab>;
+
             tapping-term-ms = <200>;
         };
-
     };
 
     keymap {
@@ -148,22 +150,22 @@
         base {
             display-name = "Base";
             bindings = <
-&kp GRAVE  &kp N1            &kp N2         &kp N3            &kp N4              &kp N5  &tog 1                                                                           &mo 3        &kp N6  &kp N7              &kp N8        &kp N9         &kp N0            &kp MINUS
-&kp TAB    &kp Q             &kp W          &kp E             &kp R               &kp T   &none                                                                            &none        &kp Y   &kp U               &kp I         &kp O          &kp SEMICOLON     &kp BSLH
-&kp ESC    &hm_l LEFT_ALT A  &hm_l LCTRL R  &hm_l LEFT_GUI S  &hm_l LEFT_SHIFT T  &kp G   &none         &kp LEFT_GUI          &kp LALT          &kp LGUI      &kp RCTRL    &none        &kp H   &hm_r LEFT_SHIFT N  &hm_r LGUI E  &hm_r LCTRL I  &hm_r LEFT_ALT O  &kp SQT
-&mo 2      &kp Z             &kp X          &kp C             &kp V               &kp B                                       &kp HOME          &kp PG_UP                               &kp N   &kp M               &kp COMMA     &kp DOT        &kp UNDER         &kp EQUAL
-&mo 2      &kp GRAVE         &none          &kp LEFT          &kp RIGHT                   &lt_bspc 1 0  &ht_sptb LEFT_SHIFT 0  &lt 2 ESCAPE      &lt 2 DELETE  &lt 4 ENTER  &lt_sptb 2 0          &kp UP              &kp DOWN      &kp LBKT       &kp RBKT          &mo 2
+&kp GRAVE  &kp N1                &kp N2            &kp N3            &kp N4              &kp N5  &tog 1                                                                          &mo 3         &kp N6  &kp N7              &kp N8        &kp N9            &kp N0                &kp MINUS
+&kp TAB    &kp Q                 &kp W             &kp E             &kp R               &kp T   &none                                                                           &none         &kp Y   &kp U               &kp I         &kp O             &kp SEMICOLON         &kp BSLH
+&kp ESC    &hm_l LEFT_CONTROL A  &hm_l LEFT_ALT R  &hm_l LEFT_GUI S  &hm_l LEFT_SHIFT T  &kp G   &none         &kp LEFT_GUI         &kp LALT          &kp LGUI      &kp RCTRL    &none         &kp H   &hm_r LEFT_SHIFT N  &hm_r LGUI E  &hm_r LEFT_ALT I  &hm_r LEFT_CONTROL O  &kp SQT
+&mo 2      &kp Z                 &kp X             &kp C             &kp V               &kp B                                      &kp HOME          &kp PG_UP                                &kp N   &kp M               &kp COMMA     &kp DOT           &kp UNDER             &kp EQUAL
+&mo 2      &kp GRAVE             &none             &kp LEFT          &kp RIGHT                   &lt_bspc 1 0  &ht_sptb LEFT_SHIFT  &lt 2 ESCAPE      &lt 2 DELETE  &lt 4 ENTER  &lt_sptb 2 0          &kp UP              &kp DOWN      &kp LBKT          &kp RBKT              &mo 2
             >;
         };
 
         nav {
             display-name = "Nav";
             bindings = <
-&none    &none         &none      &none         &none           &none  &trans                                          &none   &none         &none          &none        &none          &none  &none
-&kp TAB  &none         &none      &none         &none           &none  &none                                           &none   &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LG(RIGHT)  &none  &none
-&to 0    &kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_SHIFT  &none  &none   &trans  &trans      &trans  &trans      &none   &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &none  &none
-&none    &none         &none      &none         &none           &none                  &none       &none                       &kp HOME      &none          &none        &kp END        &none  &none
-&mo 2    &kp GRAVE     &none      &kp LEFT      &kp RIGHT              &none   &trans  &none       &none   &caps_word  &trans                &kp UP         &kp DOWN     &none          &none  &none
+&none    &none             &none         &none         &none           &none  &trans                                          &none   &none         &none          &none        &none          &none  &none
+&kp TAB  &none             &none         &none         &none           &none  &none                                           &none   &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LG(RIGHT)  &none  &none
+&to 0    &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &none  &none   &trans  &trans      &trans  &trans      &none   &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &none  &none
+&none    &none             &none         &none         &none           &none                  &none       &none                       &kp HOME      &none          &none        &kp END        &none  &none
+&mo 2    &kp GRAVE         &none         &kp LEFT      &kp RIGHT              &none   &trans  &none       &none   &caps_word  &trans                &kp UP         &kp DOWN     &none          &none  &none
             >;
         };
 
