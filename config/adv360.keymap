@@ -20,7 +20,7 @@
 #define THUMBS THUMBS_LEFT THUMBS_RIGHT
 
 / 
-    behaviors 
+    behaviors {
         #include "macros.dtsi"
       #include "version.dtsi"
 
@@ -140,7 +140,7 @@
             tapping-term-ms = <200>;
         };
 
-    ;
+    };
 
     keymap {
         compatible = "zmk,keymap";
