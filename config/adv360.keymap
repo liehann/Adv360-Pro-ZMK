@@ -94,6 +94,13 @@
           bindings = <&kp STAR>, <&kp PERCENT>;
           mods = <(MOD_LSFT)>;
         };
+
+        bs_del: bs-del {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp BSPC>, <&kp DEL>;
+          mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
