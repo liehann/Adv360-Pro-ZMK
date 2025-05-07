@@ -59,6 +59,41 @@
 
             hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
         };
+
+        amp_excl: amp-excl {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp AMPERSAND>, <&kp EXCLAMATION>;
+          mods = <(MOD_LSFT)>;
+        };
+
+        at_caret: at-caret {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp AT>, <&kp CARET>;
+          mods = <(MOD_LSFT)>;
+        };
+
+        lpar_hash: lpar-hash {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp LEFT_PARENTHESIS>, <&kp HASH>;
+          mods = <(MOD_LSFT)>;
+        };
+
+        rpar_dollar: rpar-dollar {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp RIGHT_PARENTHESIS>, <&kp DOLLAR>;
+          mods = <(MOD_LSFT)>;
+        };
+
+        star_percent: star-percent {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp STAR>, <&kp PERCENT>;
+          mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
