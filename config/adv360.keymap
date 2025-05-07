@@ -110,11 +110,11 @@
 
         num {
             bindings = <
-&trans  &trans        &trans     &trans          &trans        &trans     &trans                                             &trans  &trans  &trans          &trans        &trans            &trans        &trans
-&trans  &kp N7        &kp N5     &kp NUMBER_4    &kp NUMBER_3  &kp N8     &trans                                             &trans  &trans  &trans          &trans        &trans            &trans        &trans
-&trans  &kp NUMBER_6  &kp N2     &kp N1          &kp N0        &kp N9     &trans         &trans  &trans      &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans
-&trans  &kp COMMA     &kp SLASH  &kp UNDERSCORE  &kp PERIOD    &kp COLON                         &trans      &trans                  &trans  &trans          &trans        &trans            &trans        &trans
-&trans  &trans        &trans     &trans          &trans                   &kp BACKSPACE  &trans  &trans      &trans  &trans  &trans          &trans          &trans        &trans            &trans        &trans
+&trans  &trans        &trans        &trans          &trans      &trans     &trans                                      &trans  &trans  &trans          &trans        &trans            &trans        &trans
+&trans  &kp N7        &kp NUMBER_3  &kp NUMBER_4    &kp N5      &kp N8     &trans                                      &trans  &trans  &trans          &trans        &trans            &trans        &trans
+&trans  &kp NUMBER_6  &kp N2        &kp N1          &kp N0      &kp N9     &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans
+&trans  &trans        &kp SLASH     &kp UNDERSCORE  &kp PERIOD  &kp COMMA                  &trans      &trans                  &trans  &trans          &trans        &trans            &trans        &trans
+&trans  &trans        &trans        &trans          &trans                 &trans  &trans  &trans      &trans  &trans  &trans          &trans          &trans        &trans            &trans        &trans
             >;
         };
 
