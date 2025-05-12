@@ -170,6 +170,30 @@
             key-positions = <50 49>;
             layers = <7>;
         };
+
+        sn_sh {
+            bindings = <&cmb_sh>;
+            key-positions = <30 31>;
+            layers = <7>;
+        };
+
+        hi_wh {
+            bindings = <&cmb_wh>;
+            key-positions = <44 43>;
+            layers = <7>;
+        };
+
+        gm_gh {
+            bindings = <&cmb_gh>;
+            key-positions = <16 17>;
+            layers = <7>;
+        };
+
+        pm_ph {
+            bindings = <&cmb_ph>;
+            key-positions = <18 17>;
+            layers = <7>;
+        };
     };
 
     macros {
