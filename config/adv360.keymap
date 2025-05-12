@@ -144,17 +144,89 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        jg_z {
+            bindings = <&kp Z>;
+            key-positions = <15 16>;
+            layers = <7>;
+        };
+
+        gp_q {
+            bindings = <&kp Q>;
+            key-positions = <16 18>;
+            layers = <7>;
+        };
+
+        dn_th {
+            bindings = <&cmb_th>;
+            key-positions = <31 32>;
+            layers = <7>;
+        };
+
+        cl_ch {
+            bindings = <&cmb_ch>;
+            key-positions = <50 49>;
+            layers = <7>;
+        };
+    };
+
+    macros {
+        cmb_th: cmb_th {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp H>;
+            label = "CMB_TH";
+        };
+
+        cmb_ch: cmb_ch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp H>;
+            label = "CMB_CH";
+        };
+
+        cmb_sh: cmb_sh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp H>;
+            label = "CMB_SH";
+        };
+
+        cmb_wh: cmb_wh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp W &kp H>;
+            label = "CMB_WH";
+        };
+
+        cmb_gh: cmb_gh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp H>;
+            label = "CMB_GH";
+        };
+
+        cmb_ph: cmb_ph {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp H>;
+            label = "CMB_PH";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             display-name = "Base";
             bindings = <
-&kp GRAVE  &kp N1                &kp N2            &kp N3            &kp N4              &kp N5  &to 0                                                                           &mo 3         &kp N6  &kp N7              &kp N8        &kp N9            &kp N0                &kp MINUS
-&kp TAB    &kp Q                 &kp W             &kp E             &kp R               &kp T   &to 5                                                                           &none         &kp Y   &kp U               &kp I         &kp O             &kp SEMICOLON         &kp BSLH
-&kp ESC    &hm_l LEFT_CONTROL A  &hm_l LEFT_ALT R  &hm_l LEFT_GUI S  &hm_l LEFT_SHIFT T  &kp G   &to 6         &kp LEFT_GUI         &kp LALT          &kp LGUI      &kp RCTRL    &none         &kp H   &hm_r LEFT_SHIFT N  &hm_r LGUI E  &hm_r LEFT_ALT I  &hm_r LEFT_CONTROL O  &kp SQT
-&mo 2      &kp Z                 &kp X             &kp C             &kp V               &kp B                                      &kp HOME          &kp PG_UP                                &kp N   &kp M               &kp COMMA     &kp DOT           &kp UNDER             &kp EQUAL
-&mo 2      &kp GRAVE             &none             &kp LEFT          &kp RIGHT                   &lt_bspc 1 0  &ht_sptb LEFT_SHIFT 0 &lt 2 ESCAPE      &lt 2 DELETE  &lt 4 ENTER  &lt_sptb 2 0          &kp UP              &kp DOWN      &kp LBKT          &kp RBKT              &mo 2
+&kp GRAVE  &kp N1                &kp N2            &kp N3            &kp N4              &kp N5  &to 0                                                                             &mo 3         &kp N6  &kp N7              &kp N8        &kp N9            &kp N0                &kp MINUS
+&kp TAB    &kp Q                 &kp W             &kp E             &kp R               &kp T   &to 5                                                                             &none         &kp Y   &kp U               &kp I         &kp O             &kp SEMICOLON         &kp BSLH
+&kp ESC    &hm_l LEFT_CONTROL A  &hm_l LEFT_ALT R  &hm_l LEFT_GUI S  &hm_l LEFT_SHIFT T  &kp G   &to 6         &kp LEFT_GUI           &kp LALT          &kp LGUI      &kp RCTRL    &none         &kp H   &hm_r LEFT_SHIFT N  &hm_r LGUI E  &hm_r LEFT_ALT I  &hm_r LEFT_CONTROL O  &kp SQT
+&mo 2      &kp Z                 &kp X             &kp C             &kp V               &kp B                                        &kp HOME          &kp PG_UP                                &kp N   &kp M               &kp COMMA     &kp DOT           &kp UNDER             &kp EQUAL
+&mo 2      &kp GRAVE             &none             &kp LEFT          &kp RIGHT                   &lt_bspc 1 0  &ht_sptb LEFT_SHIFT 0  &lt 2 ESCAPE      &lt 2 DELETE  &lt 4 ENTER  &lt_sptb 2 0          &kp UP              &kp DOWN      &kp LBKT          &kp RBKT              &mo 2
             >;
         };
 
@@ -218,6 +290,16 @@
 &trans  &kp R     &kp S   &kp T   &kp H   &kp D   &to 6  &trans    &trans      &trans  &trans     &trans     &kp M   &kp N   &kp A      &kp I     &kp O      &trans
 &trans  &kp FSLH  &kp V   &kp G   &kp P   &kp B                    &trans      &trans                        &kp X   &kp W   &kp DOT    &kp SEMI  &kp MINUS  &trans
 &trans  &trans    &trans  &trans  &trans          &kp E  &kp BSPC  &trans      &trans  &kp ENTER  &kp SPACE          &trans  &trans     &trans    &trans     &trans
+            >;
+        };
+
+        hands_down_gold {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                         &trans     &trans     &trans   &trans     &trans    &trans    &trans
+&trans  &kp J   &kp G   &kp M   &kp P   &kp V   &trans                                         &trans     &kp SEMI   &kp DOT  &kp EQUAL  &kp APOS  &kp APOS  &trans
+&trans  &kp R   &kp S   &kp N   &kp D   &kp B   &trans  &trans  &trans      &trans  &trans     &trans     &kp FSLH   &kp A    &kp E      &kp I     &kp H     &trans
+&trans  &kp X   &kp F   &kp L   &kp C   &kp W                   &trans      &trans                        &kp MINUS  &kp U    &kp O      &kp Y     &kp K     &trans
+&trans  &trans  &trans  &trans  &trans          &kp T   &trans  &trans      &trans  &kp ENTER  &kp SPACE             &trans   &trans     &trans    &trans    &trans
             >;
         };
     };
