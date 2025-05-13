@@ -1,0 +1,132 @@
+#define KEYS_LEFT 0 1 2 3 4 5 6 \
+                  14 15 16 17 18 19 20 \
+                  28 29 30 31 32 33 34 \
+                  46 47 48 49 50 51 \
+                  60 61 62 63 64
+#define KEYS_RIGHT 7 8 9 10 11 12 13 \
+                   21 22 23 24 25 26 27 \
+                   39 40 41 42 43 44 45 \
+                   54 55 56 57 58 59 \
+                   71 72 73 74 75
+#define THUMBS_LEFT 35 36 52 65 66 67
+#define THUMBS_RIGHT 37 38 53 68 69 70
+#define THUMBS THUMBS_LEFT THUMBS_RIGHT
+
+hm: homerow_mods {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOMEROW_MODS";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick_tap_ms = <175>;
+    bindings = <&kp>, <&kp>;
+};
+
+hm_l: homerow_mods_left {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOMEROW_MODS_LEFT";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    require-prior-idle-ms = <150>;
+    tapping-term-ms = <200>;
+    quick_tap_ms = <175>;
+    bindings = <&kp>, <&kp>;
+
+    hold-trigger-key-positions = <KEYS_RIGHT THUMBS>;
+};
+
+hm_r: homerow_mods_right {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOMEROW_MODS_RIGHT";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    require-prior-idle-ms = <150>;
+    tapping-term-ms = <200>;
+    quick_tap_ms = <175>;
+    bindings = <&kp>, <&kp>;
+
+    hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
+};
+
+amp_excl: amp-excl {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp AMPERSAND>, <&kp EXCLAMATION>;
+
+    mods = <(MOD_LSFT)>;
+};
+
+at_caret: at-caret {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp AT>, <&kp CARET>;
+
+    mods = <(MOD_LSFT)>;
+};
+
+lpar_hash: lpar-hash {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp LEFT_PARENTHESIS>, <&kp HASH>;
+
+    mods = <(MOD_LSFT)>;
+};
+
+rpar_dollar: rpar-dollar {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp RIGHT_PARENTHESIS>, <&kp DOLLAR>;
+
+    mods = <(MOD_LSFT)>;
+};
+
+star_percent: star-percent {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp STAR>, <&kp PERCENT>;
+
+    mods = <(MOD_LSFT)>;
+};
+
+bs_del: bs-del {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp BSPC>, <&kp DEL>;
+
+    mods = <(MOD_LSFT)>;
+};
+
+lt_bspc: layer-tap-bspc-del {
+    compatible = "zmk,behavior-hold-tap";
+    label = "LAYER_TAP_BACKSPACE_DELETE";
+    #binding-cells = <2>;
+    bindings = <&mo>, <&bs_del>;
+
+    tapping-term-ms = <200>;
+};
+
+space_tab: space-tab {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp SPACE>, <&kp TAB>;
+
+    mods = <(MOD_LSFT)>;
+};
+
+lt_sptb: layer-tap-space-tab {
+    compatible = "zmk,behavior-hold-tap";
+    label = "LAYER_TAP_SPACE_TAB";
+    #binding-cells = <2>;
+    bindings = <&mo>, <&space_tab>;
+
+    tapping-term-ms = <200>;
+};
+
+ht_sptb: hold-tap-space-tab {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOLD_TAP_SPACE_TAB";
+    #binding-cells = <2>;
+    bindings = <&kp>, <&space_tab>;
+
+    tapping-term-ms = <200>;
+};
